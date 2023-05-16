@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smartphone Catalog</title>
+</head>
+<body>
+    <h1>Smartphone Catalog</h1>
+
+    <ul>
+        {% for smartphone in smartphones %}
+        <li>
+            <h2>{{ smartphone['제조사'] }} {{ smartphone['모델'] }}</h2>
+            <p><strong>Price:</strong> {{ smartphone['가격'] }}</p>
+            <p><strong>Description:</strong> {{ smartphone['세부정보'] }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
