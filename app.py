@@ -79,7 +79,14 @@ smartphones = [
         'price': '1,998,700(256GB) 2,119,700(512GB) 2,361,700(1TB)',
         'description': '19.2cm Dynamic AMOLED 2X 디스플레이, 120hz 지원, 트리플 카메라, 퀄컴 스냅드래곤 8+ Gen 1칩',
         'image': 'galaxy z fold 4.jpg',
-    }    
+    }, 
+    {
+        'brand': 'Samsung',
+        'model': 'galaxy a53',
+        'price': '623,000(128GB)',
+        'description': '16.4cm Super AMOLED 디스플레이, 120hz 지원, 트리플 카메라, 삼성 엑시노스 10 Series칩',
+        'image': 'galaxy a53.jpg',
+    }
 ]
 
 @app.route('/')
