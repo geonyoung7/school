@@ -2,19 +2,34 @@
 <html>
 <head>
     <title>Smartphone Catalog</title>
+    <style>
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            width: 400px; /* Adjust the width as per your preference */
+        }
+    </style>
 </head>
 <body>
     <h1>Smartphone Catalog</h1>
 
-    <ul>
+    <div class="row">
         {% for smartphone in smartphones %}
-        <li>
+        <div class="card">
             <h2>{{ smartphone['brand'] }} {{ smartphone['model'] }}</h2>
             <a href="{{ url_for('smartphone_details', model=smartphone['model']) }}">
                 <img src="{{ url_for('static', filename='images/' + smartphone['image']) }}" alt="{{ smartphone['model'] }}" width="200">
             </a>
-        </li>  
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 </body>
 </html>
