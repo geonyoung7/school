@@ -9,10 +9,11 @@
     <ul>
         {% for smartphone in smartphones %}
         <li>
-            <h2>{{ smartphone['제조사'] }} {{ smartphone['모델'] }}</h2>
-            <p><strong>Price:</strong> {{ smartphone['가격'] }}</p>
-            <p><strong>Description:</strong> {{ smartphone['세부정보'] }}</p>
-        </li>
+            <h2>{{ smartphone['brand'] }} {{ smartphone['model'] }}</h2>
+            <a href="{{ url_for('smartphone_details', model=smartphone['model']) }}">
+                <img src="{{ url_for('static', filename='images/' + smartphone['image']) }}" alt="{{ smartphone['model'] }}" width="200">
+            </a>
+        </li>  
         {% endfor %}
     </ul>
 </body>
