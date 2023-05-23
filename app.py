@@ -90,7 +90,6 @@ if __name__ == '__main__':
     app.run(debug=True)
 @app.route('/smartphone/<model>')
 def smartphone_details(model):
-    # Find the smartphone with the specified model
     selected_smartphone = next((s for s in smartphones if s['model'] == model), None)
     if selected_smartphone:
         return render_template('smartphone_details.html', smartphone=selected_smartphone)
